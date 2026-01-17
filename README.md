@@ -1,9 +1,11 @@
 
-# 🏛️ MemoriAção: O Museu Virtual do IF Sertão-PE
-
+## 🏛️ MemoriAção: O Museu Virtual do IF Sertão-PE
+<br>
 <p align="center">
   <img src="memoriacao.png" alt="Banner do MemoriAção" />
 </p>
+
+---
 
 O **MemoriAção** é um espaço digital dedicado à preservação e celebração da história do **Campus Salgueiro**. Mais do que um repositório de arquivos, este site é uma plataforma interativa que reconecta a comunidade académica com sua própria trajetória, transformando memórias institucionais numa experiência viva e acessível a todos.
 
