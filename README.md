@@ -26,7 +26,7 @@ Aqui, o visitante não apenas lê sobre o passado; ele navega por uma jornada qu
 Este site representa uma evolução significativa na forma como compartilhamos nossa história. Estamos a migrar de um formato de blogue estático para uma plataforma moderna, fluida e visualmente rica.
 
 * **Onde Estávamos:** [memoriacao.wordpress.com](https://www.memoriacao.wordpress.com) (O nosso antigo acervo)
-* **Onde Estamos Agora:** [memoriacao.github.io/site](https://www.google.com/search?q=https://memoriacao.github.io/site) (O novo museu interativo)
+* **Onde Estamos Agora:** [memoriacao.github.io/site](https://memoriacao.onrender.com/#/) (O novo museu interativo)
 
 A nova interface foi desenhada para ser intuitiva, permitindo que qualquer pessoa encontre informações e se sinta parte desta trajetória institucional.
 
