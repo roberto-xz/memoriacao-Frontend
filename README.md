@@ -1,5 +1,5 @@
 
-## 🏛️ MemoriAção: O Museu Virtual do IF Sertão-PE
+## 🏛️ MemoriAção: O Museu Virtual do IFSertãoPE
 <br>
 <p align="center">
   <img src="memoriacao.png" alt="Banner do MemoriAção" />
