@@ -1,4 +1,4 @@
-import{d as r}from"./database-C1Tjtnm_.js";const o=async(e,i,l)=>{let a=`SELECT COUNT(*) as t FROM publications WHERE type = '${l}'`;return e!=="all"&&(a+=` AND category = '${e}'`),i!==0&&(a+=` AND publication_year = ${i}`),(await r.query(a))[0]?.t||0},b=async(e,i=2)=>{let l=`
+import{d as r}from"./database-DWFaKKEo.js";const o=async(e,i,l)=>{let a=`SELECT COUNT(*) as t FROM publications WHERE type = '${l}'`;return e!=="all"&&(a+=` AND category = '${e}'`),i!==0&&(a+=` AND publication_year = ${i}`),(await r.query(a))[0]?.t||0},b=async(e,i=2)=>{let l=`
             SELECT title,cover, abstract, source_link, pdf_link, authors, publication_year 
             FROM publications 
             WHERE type = '${e}' ORDER BY id DESC LIMIT ${i}`;return(await r.query(l)).map(t=>({title:t.title,summary:t.abstract,authors:t.authors,published:t.publication_year,origem:t.source_link,pdf_link:t.pdf_link,cover:t.cover}))},E=async(e,i,l,a,n)=>{let t=`
