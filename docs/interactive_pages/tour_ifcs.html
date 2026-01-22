@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>VR - MemoriAção</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+
+<a-scene renderer="colorManagement: true" vr-mode-ui="enabled: true" xr-mode-ui="enabled: true; mode: vr">
+  <a-sky src="./textures/sky.webp"></a-sky>
+  <a-plane 
+    position="0 -1 0" 
+    rotation="-90 0 0" 
+    width="60" 
+    height="70" 
+    color="#7BC8A4">
+  </a-plane>
+  <!-- Assets -->
+  <a-assets>
+    <a-asset-item id="if_monument" src="./models/if_monument.glb"></a-asset-item>
+    <a-asset-item id="if_logotipo" src="./models/if_logo.glb"></a-asset-item>
+    <a-asset-item id="if_building" src="./models/if_main_building.glb"></a-asset-item>
+  </a-assets>
+
+  <!-- Cena GLB -->
+  <a-entity
+    gltf-model="#if_logotipo"
+    position="10 0 3"
+    rotation="0 0 0"
+    scale=".2 .2 .2">
+  </a-entity>
+
+
+
+<a-entity
+    gltf-model="#if_monument"
+    position="0 0 0"
+    rotation="0 0 0"
+    scale="1.2 1.2 1.2">
+  </a-entity>
+  
+<a-entity
+    gltf-model="#if_building"
+    position="3 0 3"
+    rotation="0 0 0"
+    scale="1.2 1.2 1.2">
+  </a-entity>
+
+
+  <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+  <a-entity light="type: directional; intensity: 0.8" position="1 3 2"></a-entity>
+
+  <!-- Câmera -->
+  <a-entity position="6 0 4">
+    <a-camera wasd-controls look-controls>
+      <a-cursor
+        raycaster
+        material="color: #fff; shader: flat"
+        geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015">
+      </a-cursor>
+    </a-camera>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>
