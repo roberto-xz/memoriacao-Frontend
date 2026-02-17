@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://memoriacao.github.io/site/site_maps/sitemap.xml
+Sitemap: https://memoriacao.github.io/site/sitemap.xml
