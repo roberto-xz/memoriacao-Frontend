@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://memoriacao.github.io/site/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+      <loc>https://memoriacao.github.io/site/pages/depoimentos/?category=all&page=1</loc>
+      <lastmod>2026-02-24</lastmod>
+      <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/repositorio/artigos/?page=1&amp;category=all</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
 
-  <url><loc>https://memoriacao.github.io/site/</loc><priority>1.0</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/</loc><priority>0.9</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/depoimentos/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/repositorio/artigos/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/repositorio/livros/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/repositorio/museu/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/repositorio/videos/</loc></url>
-
-  <url><loc>https://memoriacao.github.io/site/pages/sobre-nos/contatos/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/sobre-nos/equipe/</loc></url>
-  <url><loc>https://memoriacao.github.io/site/pages/sobre-nos/projeto/</loc></url>
-
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=1-if-sertao-pe-salgueiro-a-luta-a-conquista-e-a-memoria-do-polo-educacional-do-sertao</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=2-_17-de-agosto-de-2010-o-dia-em-que-lula-e-haddad-plantaram-o-futuro-no-sertao-com-o-ifsertaope</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=4-_1-mostra-sensorial-de-tecnologia-em-alimentos-2014</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=5-_2-mostra-sensorial-de-tecnologia-em-alimentos-2015</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=6-instagram-do-memoriacao-01092025</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=7-quando-a-fisica-chegou-ao-sertao-um-marco-no-if-sertao-pe</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=9-o-primeiro-aniversario-do-campus-salgueiro-um-dia-para-nunca-esquecer</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=10-o-primeiro-arraia-do-cumpade-if-quando-o-sao-joao-chegou-ao-campus-salgueiro</loc><priority>0.8</priority></url>
-  <url><loc>https://memoriacao.github.io/site/pages/memorias/memoria/?slug=13-matadouro-municipal-uma-visita-que-fez-historia-no-campus-salgueiro</loc><priority>0.8</priority></url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/repositorio/livros/?page=1&amp;category=all</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/repositorio/museu/?category=all&amp;page=1</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/repositorio/videos/?category=all&amp;page=1</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/memorias/?category=Todas&amp;page=1&amp;year=Todos</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/sobre-nos/equipe/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/sobre-nos/projeto/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://memoriacao.github.io/site/pages/sobre-nos/contatos/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
