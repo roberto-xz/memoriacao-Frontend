@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador AR - MemoriAção</title>
+
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #debug-panel {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.9);
+            color: #00ff88;
+            font-family: monospace;
+            font-size: 12px;
+            padding: 12px;
+            z-index: 9999;
+        }
+
+        #debug-panel button {
+            margin-top: 6px;
+            width: 100%;
+            background: #00aa66;
+            border: none;
+            padding: 6px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false">
+
+        <a-marker preset="hiro">
+            <a-entity id="model-entity"></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        /* =========================
+           PARAMS
+        ========================= */
+        const modelName = params.get("model") || "if_logo.glb";
+        const scaleParam = parseFloat(params.get("scale"));
+
+        let currentScale = !isNaN(scaleParam) ? scaleParam : 0.2;
+
+        const isLocal =
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1";
+
+        const debugMode = params.get("debug") === "true" || isLocal;
+
+        /* =========================
+           PATH IGUAL 3D VIEWER
+        ========================= */
+        const modelPath = `/site/models/${modelName}`;
+
+        /* =========================
+           LOAD MODEL
+        ========================= */
+        const entity = document.getElementById("model-entity");
+
+        entity.setAttribute("gltf-model", modelPath);
+        entity.setAttribute("position", "0 0 0");
+        entity.setAttribute("rotation", "0 0 0");
+        entity.setAttribute("scale", `${currentScale} ${currentScale} ${currentScale}`);
+        entity.setAttribute("animation-mixer", "");
+
+        /* =========================
+           DEBUG REAL
+        ========================= */
+        if (debugMode) {
+
+            const panel = document.createElement("div");
+            panel.id = "debug-panel";
+            document.body.appendChild(panel);
+
+            function applyScale() {
+                entity.setAttribute("scale",
+                    `${currentScale} ${currentScale} ${currentScale}`);
+            }
+
+            function renderDebug() {
+                panel.innerHTML = `
+<b>Model:</b> ${modelName}<br>
+<b>Scale:</b> ${currentScale.toFixed(3)}<br>
+<b>Path:</b> ${modelPath}
+
+<button id="up">Scale +</button>
+<button id="down">Scale -</button>
+<button id="copy">Copiar URL</button>
+`;
+
+                document.getElementById("up").onclick = () => {
+                    currentScale += 0.05;
+                    applyScale();
+                    renderDebug();
+                };
+
+                document.getElementById("down").onclick = () => {
+                    currentScale = Math.max(0.01, currentScale - 0.05);
+                    applyScale();
+                    renderDebug();
+                };
+
+                document.getElementById("copy").onclick = () => {
+                    const url =
+                        `${window.location.origin}${window.location.pathname}?model=${modelName}&scale=${currentScale.toFixed(3)}&debug=true`;
+
+                    navigator.clipboard.writeText(url);
+                };
+            }
+
+            renderDebug();
+        }
+    </script>
+
+</body>
+
+</html>

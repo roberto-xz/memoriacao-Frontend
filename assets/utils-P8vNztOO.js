@@ -1,0 +1,1 @@
+const c=(t,e)=>{const r=e.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w\s-]/g,"").trim().replace(/\s+/g,"-"),a=/^\d/.test(r)?`_${r}`:r;return`${t}-${a}`},n=t=>{if(t!=null){const e=t.match(/^(\d+)-/);if(e&&e[1])return parseInt(e[1],10)}return null};export{c,n as e};
