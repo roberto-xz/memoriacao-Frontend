@@ -1,0 +1,3 @@
+const t=async e=>{const o=e||window.location.href,r={title:"MemoriAção - Campus Salgueiro",text:"Dê uma olhada nessa memória incrível do IF SertãoPE - Campus Salgueiro que acabei de encontrar:",url:o};try{if(navigator.share&&navigator.canShare(r)){await navigator.share(r);return}if(navigator.clipboard&&navigator.clipboard.writeText){const a=`${r.text}
+
+${o}`;await navigator.clipboard.writeText(a),alert("Link copiado com sucesso! 🚀");return}throw new Error("Sem suporte para compartilhamento ou cópia")}catch(a){if(a.name==="AbortError")return;console.error("Erro ao compartilhar:",a),alert("Ops! Não conseguimos compartilhar agora. Tente copiar o link manualmente.")}};export{t as s};
