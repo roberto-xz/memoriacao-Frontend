@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer 360</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
+</head>
+<body>
+    <a-scene vr-mode-ui="enabled: true">
+        <a-entity camera look-controls wasd-controls></a-entity>
+        <a-sky id="sky"></a-sky>
+    </a-scene>
+    <script>
+        const base_url = "/site/images/images/360/";
+        const params = new URLSearchParams(window.location.search);
+        const imageName = params.get("img") || "default.jpg";
+        const imagePath = base_url + imageName;
+        const sky = document.getElementById("sky");
+        sky.setAttribute("src", imagePath);
+    </script>
+</body>
+</html>
